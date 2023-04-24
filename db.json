@@ -1,4 +1,4 @@
-{  
+{
   "cardItems": [
     {
       "id": 1,
@@ -48,5 +48,11 @@
       "location": "Hove",
       "distance": "2-hour drive"
     }
+  ],
+  "cardsData": [
+    { "id": 1, "img": "https://links.papareact.com/2io", "title": "Outdoor getaways" },
+    { "id": 2, "img": "https://links.papareact.com/q7j", "title": "Unique stays" },
+    { "id": 3, "img": "https://links.papareact.com/s03", "title": "Entire homes" },
+    { "id": 4, "img": "https://links.papareact.com/8ix", "title": "Pet allowed" }
   ]
 }
