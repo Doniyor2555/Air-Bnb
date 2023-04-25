@@ -14,6 +14,7 @@ import {
   SearchIcon,
   MenuIcon,
   UserCircleIcon,
+  UsersIcon,
 } from '@heroicons/react/outline'
 
 
@@ -21,6 +22,7 @@ function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [noOfGuests, setNoOfGuests] = useState(1);
 
   const handleChange = (ranges) => {
     setStartDate(ranges.selection.startDate);
@@ -31,6 +33,10 @@ function Header() {
     startDate,
     endDate,
     key: 'selection',
+  }
+
+  const resetInput = () => {
+    setSearchInput("");
   }
 
   return (
@@ -76,6 +82,20 @@ function Header() {
             rangeColors={["#FD5B61"]}
             onChange={handleChange}
           />
+          <div className="flex items-center border-b mb-4">
+            <h2 className="text-2xl flex-grow font-semibold">Number of Guests</h2>
+            <UsersIcon className="h-5" />
+            <input
+              value={noOfGuests}
+              onChange={e => setNoOfGuests(e.target.value)}
+              min={1}
+              type="number"
+              className="w-12 pl-2 text-lg outline-none text-red-400" />
+          </div>
+          <div className='flex'>
+            <button className="flex-grow text-gray-500" onClick={resetInput}>Cancel</button>
+            <button className="flex-grow text-red-400">Search</button>
+          </div>
         </div>
       )}
     </header>
