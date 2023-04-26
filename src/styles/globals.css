@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-* { 
+@layer components {
+  .button {
+    @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 transition transform duration-100 ease-out active:bg-gray-100
+  }
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
